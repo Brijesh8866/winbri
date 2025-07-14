@@ -1,0 +1,15 @@
+1. Call button every where
+2. perfect appointment form
+- like: https://www.healthians.com/health-checkup/full-body-health-checkup-ind-349/googleads?utm_source=GoogleAds&utm_medium=Search-Lead-ROI&utm_campaign=Search-SLP-Leads_FullBodyCheck_ROI_Feb25&utm_term=package349_Full_Body_Checkup_General&utm_content=health%20screening%20services&gad_source=1&gad_campaignid=22217713805&gclid=Cj0KCQjwvajDBhCNARIsAEE29WqudHsj0XK6c3c-5aozHsZT_1lCURruPEgv9kL2OI8KJibOkTPvoiMaAsJpEALw_wcB
+3. add videos
+4. add new services
+5. replace call button instead of top
+6. pop-up
+7. we can make a dynamic website like this:
+- https://www.healthians.com/scans/surat/ecg-test
+
+1. website theme design button
+2. badhi j image and content
+3. online offline booking
+4. consulting
+5. e-commerce

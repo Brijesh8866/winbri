@@ -2,8 +2,21 @@ import { Helmet } from "react-helmet";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeHeader from "../components/partials/Header/header";
 import HomeFooter from "../components/partials/Footer/footer";
+import Slider from "react-slick";
 
 function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: false,
+  };
+
   return (
     <>
       <Helmet>
@@ -191,128 +204,159 @@ function Home() {
           </div>
         </header>
         {/* Slider Area */}
-        <section className="slider d-md-block d-none">
+        {/* <section className="slider d-md-block d-none"> */}
+        <section className="slider">
           <div className="hero-slider">
-            <div
-              className="single-slider"
-              style={{ backgroundImage: 'url("/assets/images/slider-2.webp")' }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7">
-                    <div className="text">
-                      <h1>
-                        We Provide <span>Medical</span> Services That You Can
-                        <span>Trust!</span>
-                      </h1>
-                      <p>
-                        Book Appointment for Emergency <span>ECG</span> or
-                        <span>Routine ECG</span>
-                      </p>
-                      <div className="button">
-                        <a href="#" className="btn">
-                          Book Now
-                        </a>
-                        <a href="#" className="btn primary">
-                          Know More
-                        </a>
+            <Slider {...settings}>
+              <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-2.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency <span>ECG</span> or
+                            <span>Routine ECG</span>
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Book Now
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* <div
-              className="single-slider"
-              style={{ backgroundImage: 'url("/assets/images/slider-1.webp")' }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7">
-                    <div className="text">
-                      <h1>
-                        We Provide <span>Medical</span> Services That You Can
-                        <span>Trust!</span>
-                      </h1>
-                      <p>
-                        Book Appointment for Emergency <span>PFT</span> or
-                        <span>Routine PFT</span>
-                      </p>
-                      <div className="button">
-                        <a href="#" className="btn">
-                          Get Appointment
-                        </a>
-                        <a href="#" className="btn primary">
-                          Know More
-                        </a>
+              <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-1.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency <span>PFT</span> or
+                            <span>Routine PFT</span>
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Get Appointment
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="single-slider"
-              style={{ backgroundImage: 'url("/assets/images/slider-3.webp")' }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7">
-                    <div className="text">
-                      <h1>
-                        We Provide <span>Medical</span> Services That You Can
-                        <span>Trust!</span>
-                      </h1>
-                      <p>
-                        Book Appointment for Emergency <span>X-Ray</span> or
-                        <span>Routine X-Ray</span>
-                      </p>
-                      <div className="button">
-                        <a href="#" className="btn">
-                          Get Appointment
-                        </a>
-                        <a href="#" className="btn primary">
-                          Know More
-                        </a>
+              <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-3.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency <span>X-Ray</span> or
+                            <span>Routine X-Ray</span>
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Get Appointment
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="single-slider"
-              style={{ backgroundImage: 'url("/assets/images/slider-4.webp")' }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7">
-                    <div className="text">
-                      <h1>
-                        We Provide <span>Medical</span> Services That You Can
-                        <span>Trust!</span>
-                      </h1>
-                      <p>
-                        Book Appointment for Emergency <span>Blood Test</span>{" "}
-                        or
-                        <span>Routine Blood Test</span>
-                      </p>
-                      <div className="button">
-                        <a href="#" className="btn">
-                          Get Appointment
-                        </a>
-                        <a href="#" className="btn primary">
-                          Know More
-                        </a>
+              <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-4.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency{" "}
+                            <span>Blood Test</span> or
+                            <span>Routine Blood Test</span>
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Get Appointment
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </Slider>
           </div>
         </section>
-        <section className="slider d-md-none d-block">
+        {/* <section className="slider d-md-none d-block">
           <div className="hero-slider">
             <div
               className="single-slider d-flex align-items-end pb-4"
@@ -440,7 +484,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* Schedule Area */}
         <section className="schedule">
           <div className="container">
@@ -544,7 +588,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">ECG</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
                 <img
@@ -553,7 +597,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">PFT</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
                 <img
@@ -562,7 +606,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">X-ray</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
                 <img
@@ -571,7 +615,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Blood Tests</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
                 <img
@@ -580,7 +624,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Sleep Study</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
                 <img
@@ -589,7 +633,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Holter Monitoring</p>
-                <button className="text-center">CONSULT NOW</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
             </div>
             {/* <div className="row">
