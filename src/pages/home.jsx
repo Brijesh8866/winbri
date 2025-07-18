@@ -3,15 +3,29 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeHeader from "../components/partials/Header/header";
 import HomeFooter from "../components/partials/Footer/footer";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 4000,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: false,
+  };
+
+  const gallerySettings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
@@ -960,30 +974,62 @@ function Home() {
           </div>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-3 px-1">
-                <img src="/assets/images/10.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/11.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/12.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/13.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/31.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/37.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/06.webp" alt="#" />
-              </div>
-              <div className="col-3 px-1">
-                <img src="/assets/images/25.webp" alt="#" />
-              </div>
+                <div className="col-3 px-1">
+                  <img
+                    src="/assets/images/10.webp"
+                    alt="10"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1">
+                  <img
+                    src="/assets/images/11.webp"
+                    alt="11"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1">
+                  <img
+                    src="/assets/images/12.webp"
+                    alt="12"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1">
+                  <img
+                    src="/assets/images/13.webp"
+                    alt="13"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1 pt-2">
+                  <img
+                    src="/assets/images/31.webp"
+                    alt="31"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1 pt-2">
+                  <img
+                    src="/assets/images/37.webp"
+                    alt="37"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1 pt-2">
+                  <img
+                    src="/assets/images/06.webp"
+                    alt="06"
+                    className="w-100"
+                  />
+                </div>
+                <div className="col-3 px-1 pt-2">
+                  <img
+                    src="/assets/images/25.webp"
+                    alt="25"
+                    className="w-100"
+                  />
+                </div>
             </div>
           </div>
         </section>
