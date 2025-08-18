@@ -581,7 +581,7 @@ function Home() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title">
-                  <h2>We Offer Different Services To Improve Your Health</h2>
+                  <h2>Diagnostic services at Doorstep</h2>
                   <img
                     src="/assets/images/section-img.webp"
                     alt="Health Services"
@@ -602,6 +602,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">ECG</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
@@ -611,6 +612,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">PFT</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
@@ -620,6 +622,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">X-ray</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
@@ -629,6 +632,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Blood Tests</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
@@ -638,6 +642,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Sleep Study</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
               <div className="col-2 text-center service">
@@ -647,6 +652,7 @@ function Home() {
                   alt=""
                 />
                 <p className="text-center mt-1">Holter Monitoring</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
                 <button className="text-center consult-btn">CONSULT NOW</button>
               </div>
             </div>
@@ -754,6 +760,92 @@ function Home() {
                 </div>
               </div>
             </div> */}
+          </div>
+        </section>
+        {/* service */}
+        <section
+          className="services section"
+          style={{ padding: "0px 0px 50px" }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title">
+                  <h2>Health Care Services At Doorstep</h2>
+                  <img
+                    src="/assets/images/section-img.webp"
+                    alt="Health Services"
+                  />
+                  {/* <p>
+                    We offer a variety of diagnostic services to help you
+                    maintain your health and well-being with advanced medical
+                    technology and expert care.
+                  </p> */}
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">ECG</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">PFT</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">X-ray</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">Blood Tests</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">Sleep Study</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+              <div className="col-2 text-center service">
+                <img
+                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
+                  width="100%"
+                  alt=""
+                />
+                <p className="text-center mt-1">Holter Monitoring</p>
+                <button className="text-center read-btn mb-1">READ MORE</button>
+                <button className="text-center consult-btn">CONSULT NOW</button>
+              </div>
+            </div>
           </div>
         </section>
         {/* Feautes */}
@@ -1184,12 +1276,12 @@ function Home() {
                   <div className="news-text">
                     <p className="pb-2">
                       Myocardial infarction, commonly known as a heart attack,
-                      is the condition when a part of the heart doesn’t receive
+                      is the condition when a part of the heart doesn't receive
                       an adequate supply of blood. The need for oxygen-rich
                       blood to reach the heart and to flow through all the
                       organs of the body properly is highly essential for a
-                      human body’s survival. While ‘cardial’ refers to the
-                      heart, ‘myo’ depicts muscles, and infarction is basically
+                      human body's survival. While ‘cardial' refers to the
+                      heart, ‘myo' depicts muscles, and infarction is basically
                       when tissue dies due to a lack of...
                     </p>
                   </div>
