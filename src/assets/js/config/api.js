@@ -6,7 +6,7 @@ let PUBLIC_ROUTE = '/public/v1';
 let BASE_URL = apiConfig.BASE_URL + USER_ROUTE;
 let FWG_BASE_URL = apiConfig.FWG_BASE_URL + USER_ROUTE;
 let PUBLIC_URL = apiConfig.BASE_URL + PUBLIC_ROUTE;
-const FILE_BASE_URL = 'https://files.fggroup.in/';
+const FILE_BASE_URL = 'https://files.winbri.com/';
 
 //User URL
 export const axiosInstance = axios.create({
@@ -15,7 +15,7 @@ export const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const authorization = localStorage.getItem('fg_group_user_authorization');
+    const authorization = localStorage.getItem('winbri_life_science_user_authorization');
 
     if (authorization) {
       config.headers['authorization'] = authorization;
@@ -35,7 +35,7 @@ export const axiosInstanceFwg = axios.create({
 
 axiosInstanceFwg.interceptors.request.use(
   (config) => {
-    const authorization = localStorage.getItem('fg_group_user_authorization');
+    const authorization = localStorage.getItem('winbri_life_science_user_authorization');
 
     if (authorization) {
       config.headers['authorization'] = authorization;
@@ -55,7 +55,7 @@ export const paymentAxiosInstance = axios.create({
 
 paymentAxiosInstance.interceptors.request.use(
   (config) => {
-    const authorization = localStorage.getItem('fg_group_user_authorization');
+    const authorization = localStorage.getItem('winbri_life_science_user_authorization');
 
     if (authorization) {
       config.headers['authorization'] = authorization;
@@ -75,7 +75,7 @@ export const publicAxiosInstance = axios.create({
 
 publicAxiosInstance.interceptors.request.use(
   (config) => {
-    const authorization = localStorage.getItem('fg_group_user_authorization');
+    const authorization = localStorage.getItem('winbri_life_science_user_authorization');
 
     if (authorization) {
       config.headers['authorization'] = authorization;

@@ -617,6 +617,13 @@ body {
 	End Header CSS
 ===========================*/
 
+.main-loading-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*===========================
 	Start Hero Area CSS
 =============================*/
@@ -4798,6 +4805,10 @@ body {
   width: 129.04px;
 }
 
+.book-btn {
+  width: 129.04px;
+}
+
 /* new css */
 
 .sortorder {
@@ -4920,7 +4931,7 @@ body {
   width: auto;
   position: relative;
 }
-.doc-imgrat img {
+.doc-imgrat .doc-img {
   width: 160px;
   height: 160px;
   border-radius: 8px;
@@ -5110,14 +5121,16 @@ body {
   text-decoration: none;
 }
 .doctor-fee .book-appoint {
-  background: #f16948;
+  background: #6fba1f;
   border-radius: 30px;
   padding: 10px 25px 10px 25px;
   margin: 10px 0px;
+  transition: .7s all;
 }
 .doctor-fee .book-appoint:hover {
-  background: #fb795a;
+  background: #518f10;
   cursor: pointer;
+  transition: .7s all;
 }
 .doctor-fee .book-appoint a,
 .doctor-fee .book-appoint button {
@@ -5129,6 +5142,7 @@ body {
   display: block;
   text-align: center;
   width: 100%;
+  padding: 10px 0px;
 }
 .consult_title {
   font-size: 13px !important;
@@ -5238,7 +5252,41 @@ textarea {
   padding: 20px 20px;
 }
 
+.list-style-unset, .list-style-unset li {
+  list-style: unset !important;
+}
+
+.sticky-button {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 52%;
+  display: none;
+}
+
+.service-img {
+  height: 340px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+
 @media screen and (max-width: 680px) {
+  .sticky-button {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 72%;
+    display: block;
+  }
+  .service-img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
   .sortorder {
     margin: 0px 0px 10px 0px;
     float: left;
@@ -5363,8 +5411,9 @@ textarea {
     margin: 9px 0px 0px 0px;
     clear: both;
     float: left;
-    width: 32%;
-    padding: 5px;
+    /* width: 32%; */
+    width: 100%;
+    padding: 10px 5px;
     display: inline-block;
   }
   .doctor-fee .book-appoint {

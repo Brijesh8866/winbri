@@ -109,8 +109,8 @@ export const createEBookPaymentBook = async (ebook_id) => {
     }
 
     // Check Authentication
-    if (localStorage.getItem("fg_group_user_authorization") === null) {
-      localStorage.removeItem("fg_group_user_authorization");
+    if (localStorage.getItem("winbri_life_science_user_authorization") === null) {
+      localStorage.removeItem("winbri_life_science_user_authorization");
       localStorage.removeItem("user_info");
 
       // expire in 5h
@@ -234,10 +234,10 @@ export const createBookOrder = async (
 
     // Check Authentication
     if (
-      localStorage.getItem("fg_group_user_authorization") === null ||
+      localStorage.getItem("winbri_life_science_user_authorization") === null ||
       localStorage.getItem("user_info") === null
     ) {
-      localStorage.removeItem("fg_group_user_authorization");
+      localStorage.removeItem("winbri_life_science_user_authorization");
       localStorage.removeItem("user_info");
 
       // expire in 5h

@@ -124,7 +124,7 @@ Version:	1.1
     padding-top: 15px;
   }
   .slider .single-slider {
-    height: 380px;
+    height: 100%;
   }
   .schedule {
     background: #fff;
@@ -565,7 +565,7 @@ Version:	1.1
     text-align: center;
   }
   .slider .single-slider {
-    height: 380px;
+    height: 100%;
   }
   .schedule {
     background: #fff;
@@ -585,7 +585,7 @@ Version:	1.1
     position: relative;
   }
   .slider .single-slider:before {
-    position: absolute;
+    /* position: absolute; */
     content: "";
     left: 0;
     top: 0;
@@ -1049,7 +1049,7 @@ Version:	1.1
     text-align: center;
   }
   .slider .single-slider {
-    height: 380px;
+    height: 100%;
   }
   .schedule {
     background: #fff;
@@ -1059,9 +1059,14 @@ Version:	1.1
     padding: 50px 0;
     border-bottom: 1px solid #eee;
   }
-  .schedule .schedule-inner {
+  /* .schedule .schedule-inner {
     transform: none;
-  }
+  } */
+  /* .schedule {
+    position: relative;
+    transform: translateY(-120px);
+    z-index: 9;
+  } */
   .schedule .single-schedule {
     margin: 15px 0;
   }
@@ -1069,7 +1074,7 @@ Version:	1.1
     position: relative;
   }
   .slider .single-slider:before {
-    position: absolute;
+    /* position: absolute; */
     content: "";
     left: 0;
     top: 0;

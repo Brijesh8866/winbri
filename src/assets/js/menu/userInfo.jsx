@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 
 const UserInfo = () => {
-  const auth = localStorage.getItem("fg_group_user_authorization");
+  const auth = localStorage.getItem("winbri_life_science_user_authorization");
   const [userInfo, setUserInfo] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [isUserMenuVisible, setIsUserMenuVisible] = useState(false);
@@ -81,7 +81,7 @@ const UserInfo = () => {
               Hi, {userInfo?.user?.first_name} <i className="far fa-user"></i>
             </li>
             <li className="mx-0">
-              <a href="/user/order" aria-label="Fg Group">
+              <a href="/user/order" aria-label="Winbri">
                 <img
                   src={
                     process.env.PUBLIC_URL + "/assets/images/img/cart-img.webp"

@@ -64,7 +64,7 @@ const LoginModal = ({ onClose }) => {
 
       if (response.data.data.authorization) {
         localStorage.setItem(
-          "fg_group_user_authorization",
+          "winbri_life_science_user_authorization",
           response.data.data.authorization
         );
         toast.success("Successfully Login!");
@@ -88,7 +88,7 @@ const LoginModal = ({ onClose }) => {
       });
       if (response.status === 200) {
         localStorage.setItem(
-          "fg_group_user_authorization",
+          "winbri_life_science_user_authorization",
           response.data.data.authorization
         );
         await getUserData();
@@ -115,7 +115,7 @@ const LoginModal = ({ onClose }) => {
 
       if (response.status === 200) {
         localStorage.setItem(
-          "fg_group_user_authorization",
+          "winbri_life_science_user_authorization",
           response.data.data.authorization
         );
         await getUserData();
@@ -169,10 +169,10 @@ const LoginModal = ({ onClose }) => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
+                  process.env.PUBLIC_URL + "/assets/images/logo.webp"
                 }
                 width="20%"
-                alt="Fg Group"
+                alt="Winbri"
               />
             </div>
           </Modal.Title>
@@ -232,10 +232,10 @@ const LoginModal = ({ onClose }) => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
+                  process.env.PUBLIC_URL + "/assets/images/logo.webp"
                 }
                 width="20%"
-                alt="Fg Group"
+                alt="Winbri"
               />
             </div>
           </Modal.Title>

@@ -73,14 +73,14 @@ root.render(
                   <img
                     src={
                       process.env.PUBLIC_URL +
-                      "../assets/images/logo/fg_group.webp"
+                      "/assets/images/logo.webp"
                     }
                     className="img-fluid"
-                    width={35}
+                    width={200}
                     height="auto"
-                    alt="Fg Group"
+                    alt="Winbri"
                   />
-                  <b className="fs-24">Fg Group</b>
+                  {/* <b className="fs-24">Winbri</b> */}
                 </div>
               </div>
             </div>

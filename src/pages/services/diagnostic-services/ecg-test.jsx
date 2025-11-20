@@ -1,43 +1,34 @@
 import { Helmet } from "react-helmet";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import HomeHeader from "../../components/partials/Header/header";
-import HomeFooter from "../../components/partials/Footer/footer";
+import HomeHeader from "../../../components/partials/Header/header";
+import HomeFooter from "../../../components/partials/Footer/footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import BookAppointmentButton from "../../../components/book-appointment-button";
+import AllServices from "../../../components/all-services";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function ECGService() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: false,
-  };
+  const [showMore, setShowMore] = useState(false);
 
-  const gallerySettings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: false,
+  const toggleReadMore = () => {
+    setShowMore(!showMore);
   };
 
   return (
     <>
       <Helmet>
-        <title>One-Stop Solution For All Your Fitness Needs - FG Group</title>
+        <title>
+          One-Stop Solution For All Your Fitness Needs - Winbri Life Science
+        </title>
         <meta
           name="description"
-          content="FG Group Solely Works In The Health & Fitness Sector. We Provide Diet & Exercise Plans As Well As Health And Fitness Courses. We Also Offer Digital Marketing Courses For Fitness Professionals, And Ready-Made Meals For Healthy Living."
+          content="Winbri Life Science Solely Works In The Health & Fitness Sector. We Provide Diet & Exercise Plans As Well As Health And Fitness Courses. We Also Offer Digital Marketing Courses For Fitness Professionals, And Ready-Made Meals For Healthy Living."
         />
         <meta
           name="keywords"
@@ -54,6 +45,7 @@ function ECGService() {
       <HomeHeader />
 
       <>
+        <BookAppointmentButton />
         {/* Breadcrumbs */}
         <div className="breadcrumbs overlay">
           <div className="container">
@@ -63,7 +55,9 @@ function ECGService() {
                   <h2>Doorstep ECG Test</h2>
                   <ul className="bread-list">
                     <li>
-                      <a href="index.html">Home</a>
+                      <a alt="Winbri" href="/">
+                        Home
+                      </a>
                     </li>
                     <li>
                       <i className="icofont-simple-right" />
@@ -84,12 +78,40 @@ function ECGService() {
                   <div className="col-12">
                     <div className="single-main">
                       <div className="row">
-                        <div className="col-6">
-                          <div className="news-head">
-                            <img src="/assets/images/blog3.webp" alt="#" />
-                          </div>
+                        <div className="col-md-6">
+                          <OwlCarousel
+                            loop
+                            autoplay
+                            dots={false}
+                            id="carouselExampleControls"
+                            className="owl-carousel owl-theme"
+                            responsive={{
+                              0: {
+                                items: 1,
+                              },
+                              600: {
+                                items: 1,
+                              },
+                              1000: {
+                                items: 1,
+                              },
+                            }}
+                          >
+                            <div className="news-head">
+                              <img
+                                src="/assets/images/services/ecg.JPG"
+                                alt="#"
+                              />
+                            </div>
+                            <div className="news-head">
+                              <img
+                                src="/assets/images/services/ecg-2.JPG"
+                                alt="#"
+                              />
+                            </div>
+                          </OwlCarousel>
                         </div>
-                        <div className="col-6">
+                        <div className="col-md-6">
                           <h1 className="news-title">
                             <a href="news-single.html">
                               Our Doorstep ECG Service
@@ -97,77 +119,488 @@ function ECGService() {
                           </h1>
                           <div className="news-text">
                             <p>
-                              "Winbri Life Science" is a company that makes
-                              provides an ECG tests at home in addition to
-                              cardiologist-certified reports and
-                              teleconsultation services. The ECG or the
-                              Electrocardiogram test is one of the tests doctors
-                              use to detect any abnormality of the electrical
-                              activity of the heart. It records this as a heart
-                              rhythm and electrical impulses, which helps
-                              cardiologists to identify different heart
-                              conditions. When I have to do ECG test?
+                              An Electrocardiogram (ECG or EKG) is a painless,
+                              non-invasive test that records the electrical
+                              activity of the heart. Each heartbeat is triggered
+                              by an electrical impulse, and an ECG captures
+                              these signals to create a graphical chart.
                             </p>
                             <p>
-                              <b>Chest Pain:</b> It's almost always accompanied
-                              with other symptoms like dizziness, shortness of
-                              breath or nausea, what could be a sign of a heart
-                              problem.
+                              <b>This chart allows doctors to assess:</b>
+                              <ul className="list-style-unset pl-3">
+                                <li>Heart rate and rhythm</li>
+                                <li>Blood supply to the heart</li>
+                                <li>Enlargement of heart chambers</li>
+                                <li>Past or ongoing heart attack</li>
+                                <li>
+                                  Effect of medications or pacemaker devices
+                                </li>
+                              </ul>
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div className="news-text">
+                      <div className="news-text d-md-block d-none">
                         <div className="row">
-                          <div className="col-6">
+                          <div className="col-12">
                             <p className="mt-2">
-                              <b>Palpitations:</b> Tachycardia or a feeling of
-                              missed beats.
+                              It is one of the most important first-line
+                              diagnostic tools in cardiology and is often the
+                              first step in evaluating chest pain or
+                              heart-related symptoms.
                             </p>
                             <p>
-                              <b>Dizziness or Fainting:</b> For instance if it's
-                              unanswered question or repetitive it may show
-                              heart rhythm disorder.
+                              <b>Indications - When Should You Get an ECG?</b>
+                            </p>
+                            <div className="row">
+                              <div className="col-md-4">
+                                <p>
+                                  <b>1. Symptoms that Require ECG</b>
+                                  <ul className="list-style-unset pl-3">
+                                    <li>Chest pain, heaviness, or pressure</li>
+                                    <li>Palpitations or irregular heartbeat</li>
+                                    <li>
+                                      Shortness of breath or unexplained
+                                      tiredness
+                                    </li>
+                                    <li>Dizziness, fainting, or weakness</li>
+                                  </ul>
+                                </p>
+                              </div>
+                              <div className="col-md-4">
+                                <p>
+                                  <b>2. Risk Factors & Preventive Screening</b>
+                                  <ul className="list-style-unset pl-3">
+                                    <li>
+                                      Hypertension, diabetes, high cholesterol
+                                    </li>
+                                    <li>Family history of heart disease</li>
+                                    <li>Obesity and sedentary lifestyle</li>
+                                    <li>
+                                      Heavy smoking, alcohol use, or chronic
+                                      stress
+                                    </li>
+                                  </ul>
+                                </p>
+                              </div>
+                              <div className="col-md-4">
+                                <p>
+                                  <b>3. Medical Needs</b>
+                                  <ul className="list-style-unset pl-3">
+                                    <li>Pre-surgical heart check-up</li>
+                                    <li>
+                                      Monitoring during or after hospital
+                                      treatment
+                                    </li>
+                                    <li>
+                                      Regular follow-up for known heart patients
+                                    </li>
+                                    <li>
+                                      Suspected heart attack or emergency casess
+                                    </li>
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                            <p>
+                              <b>Why ECG is Important?</b>
                             </p>
                             <p>
-                              <b>Fatigue:</b> And if it persists without any
-                              clear reason, it's likely a symptom of cardiac
-                              illness.
+                              <b>Early Detection:</b> Helps diagnose heart
+                              rhythm disturbances, blocked arteries, or damage
+                              to heart muscle.
                             </p>
                             <p>
-                              <b>Monitoring Heart Health:</b> Individuals with
-                              specific risk factors such as diabetes, obesity,
-                              or smoking history will likely be advised to have
-                              regular ECG tests which will enable monitoring of
-                              heart progress. These are just some of the
-                              indicators for an ECG test, and a physician may
-                              recommend it for other reasons that should be
-                              based on the patient's unique health condition and
-                              symptoms.
-                            </p>
-                          </div>
-                          <div className="col-6">
-                            <p>
-                              <b>High Blood Pressure (Hypertension):</b>{" "}
-                              Monitoring of heart health may include testing ECG
-                              regularly.
+                              <b>Life-Saving in Emergencies:</b> Quick test
+                              during chest pain or suspected heart attack.
                             </p>
                             <p>
-                              <b>Family History of Heart Disease:</b> Some
-                              people with a family history of heart disease may
-                              have regular ECG tests performed as a way of
-                              preventing diseases in the early stage.
+                              <b>Monitoring Treatment:</b> Tracks the effect of
+                              medicines or pacemaker devices.
                             </p>
                             <p>
-                              <b>Pre-surgical Evaluation:</b> ECG can be used in
-                              pre-surgical evaluations to identify
-                              cardiovascular issues and ensure patients are in a
-                              good physical condition before procedures.
+                              <b>Prevention:</b> Identifies hidden heart issues
+                              before they become severe.
+                            </p>
+                            <p>
+                              <b>Safe & Easy:</b> No injections, no pain, no
+                              radiation - safe for all age groups.
+                            </p>
+                            <p>
+                              <b>
+                                Why Winbri Life Science ECG Service is Better?
+                              </b>
+                            </p>
+                            <p>
+                              At Winbri Life Science, we bring advanced
+                              healthcare directly to your doorstep, ensuring
+                              comfort, speed, and accuracy.
+                            </p>
+                            <p>
+                              🕑 Always Available - 24 × 7 × 365 days, anytime,
+                              anywhere.
+                            </p>
+                            <p>
+                              🏠 Doorstep Service - ECG at your home, office,
+                              clinic, hospital, or diagnostic centre
+                            </p>
+                            <p>
+                              👨‍⚕ Certified by Cardiologists - Reports reviewed
+                              and validated by experienced specialists.
+                            </p>
+                            <p>
+                              📞 Tele-Consultation Support - Direct online
+                              consultation with doctors after your test.
+                            </p>
+                            <p>
+                              ⚡ Quick & Reliable - Test completed in just 10-15
+                              minutes with fast report delivery.
+                            </p>
+                            <p>
+                              🔒 Secure & Confidential - Patient reports handled
+                              with utmost privacy.
+                            </p>
+                            <p>
+                              ❤ Patient-Centric Care - No travel, no waiting, no
+                              stress - healthcare at your convenience.
+                            </p>
+                            <p>
+                              Unlike standard diagnostic centres, Winbri Life
+                              Science combines doorstep testing with
+                              cardiology-certified reporting and
+                              teleconsultation, offering complete heart care in
+                              one service.
+                            </p>
+                            <p>
+                              <b>How It Works?</b>
+                            </p>
+                            <p>
+                              <b>1. Book Your Test:</b> Call us anytime or book
+                              online for an ECG at your preferred time and
+                              place.
+                            </p>
+                            <p>
+                              <b>2. Doorstep Visit:</b> A trained healthcare
+                              technician arrives with a portable ECG machine.
+                            </p>
+                            <p>
+                              <b>3. ECG Test:</b> Electrodes are placed on the
+                              chest, arms, and legs. The test is painless and
+                              takes about 10-15 minutes.
+                            </p>
+                            <p>
+                              <b>4. Specialist Review:</b> The ECG recording is
+                              reviewed and certified by a cardiologist.
+                            </p>
+                            <p>
+                              <b>5. Report Delivery:</b> Reports are delivered
+                              quickly via WhatsApp, Email, or printed copy.
+                            </p>
+                            <p>
+                              <b>6. Tele-Consultation:</b> Speak to a specialist
+                              doctor online for interpretation and next steps.
+                            </p>
+                            <p>
+                              <b>
+                                Winbri Life Science - Your Heart in Safe Hands
+                              </b>
+                            </p>
+                            <p>
+                              With round-the-clock ECG services,
+                              cardiologist-certified reports, and
+                              teleconsultation support, Winbri Life Science
+                              ensures that top-quality heart care is always
+                              available at your doorstep.
+                            </p>
+                            <p>
+                              💙 Your health, our mission - Anytime. Anywhere.
+                              Always. 💙
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div className="row">
+                      <div className="d-md-none d-block mb-3">
+                        {showMore ? (
+                          <div className="news-text">
+                            <div className="row">
+                              <div className="col-12">
+                                <p className="mt-2">
+                                  It is one of the most important first-line
+                                  diagnostic tools in cardiology and is often
+                                  the first step in evaluating chest pain or
+                                  heart-related symptoms.
+                                </p>
+                                <p>
+                                  <b>
+                                    Indications - When Should You Get an ECG?
+                                  </b>
+                                </p>
+                                <div className="row">
+                                  <div className="col-md-4">
+                                    <p>
+                                      <b>1. Symptoms that Require ECG</b>
+                                      <ul className="list-style-unset pl-3">
+                                        <li>
+                                          Chest pain, heaviness, or pressure
+                                        </li>
+                                        <li>
+                                          Palpitations or irregular heartbeat
+                                        </li>
+                                        <li>
+                                          Shortness of breath or unexplained
+                                          tiredness
+                                        </li>
+                                        <li>
+                                          Dizziness, fainting, or weakness
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                  <div className="col-md-4">
+                                    <p>
+                                      <b>
+                                        2. Risk Factors & Preventive Screening
+                                      </b>
+                                      <ul className="list-style-unset pl-3">
+                                        <li>
+                                          Hypertension, diabetes, high
+                                          cholesterol
+                                        </li>
+                                        <li>Family history of heart disease</li>
+                                        <li>Obesity and sedentary lifestyle</li>
+                                        <li>
+                                          Heavy smoking, alcohol use, or chronic
+                                          stress
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                  <div className="col-md-4">
+                                    <p>
+                                      <b>3. Medical Needs</b>
+                                      <ul className="list-style-unset pl-3">
+                                        <li>Pre-surgical heart check-up</li>
+                                        <li>
+                                          Monitoring during or after hospital
+                                          treatment
+                                        </li>
+                                        <li>
+                                          Regular follow-up for known heart
+                                          patients
+                                        </li>
+                                        <li>
+                                          Suspected heart attack or emergency
+                                          casess
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                </div>
+                                <p>
+                                  <b>Why ECG is Important?</b>
+                                </p>
+                                <p>
+                                  <b>Early Detection:</b> Helps diagnose heart
+                                  rhythm disturbances, blocked arteries, or
+                                  damage to heart muscle.
+                                </p>
+                                <p>
+                                  <b>Life-Saving in Emergencies:</b> Quick test
+                                  during chest pain or suspected heart attack.
+                                </p>
+                                <p>
+                                  <b>Monitoring Treatment:</b> Tracks the effect
+                                  of medicines or pacemaker devices.
+                                </p>
+                                <p>
+                                  <b>Prevention:</b> Identifies hidden heart
+                                  issues before they become severe.
+                                </p>
+                                <p>
+                                  <b>Safe & Easy:</b> No injections, no pain, no
+                                  radiation - safe for all age groups.
+                                </p>
+                                <p>
+                                  <b>
+                                    Why Winbri Life Science ECG Service is
+                                    Better?
+                                  </b>
+                                </p>
+                                <p>
+                                  At Winbri Life Science, we bring advanced
+                                  healthcare directly to your doorstep, ensuring
+                                  comfort, speed, and accuracy.
+                                </p>
+                                <p>
+                                  🕑 Always Available - 24 × 7 × 365 days,
+                                  anytime, anywhere.
+                                </p>
+                                <p>
+                                  🏠 Doorstep Service - ECG at your home,
+                                  office, clinic, hospital, or diagnostic centre
+                                </p>
+                                <p>
+                                  👨‍⚕ Certified by Cardiologists - Reports
+                                  reviewed and validated by experienced
+                                  specialists.
+                                </p>
+                                <p>
+                                  📞 Tele-Consultation Support - Direct online
+                                  consultation with doctors after your test.
+                                </p>
+                                <p>
+                                  ⚡ Quick & Reliable - Test completed in just
+                                  10-15 minutes with fast report delivery.
+                                </p>
+                                <p>
+                                  🔒 Secure & Confidential - Patient reports
+                                  handled with utmost privacy.
+                                </p>
+                                <p>
+                                  ❤ Patient-Centric Care - No travel, no
+                                  waiting, no stress - healthcare at your
+                                  convenience.
+                                </p>
+                                <p>
+                                  Unlike standard diagnostic centres, Winbri
+                                  Life Science combines doorstep testing with
+                                  cardiology-certified reporting and
+                                  teleconsultation, offering complete heart care
+                                  in one service.
+                                </p>
+                                <p>
+                                  <b>How It Works?</b>
+                                </p>
+                                <p>
+                                  <b>1. Book Your Test:</b> Call us anytime or
+                                  book online for an ECG at your preferred time
+                                  and place.
+                                </p>
+                                <p>
+                                  <b>2. Doorstep Visit:</b> A trained healthcare
+                                  technician arrives with a portable ECG
+                                  machine.
+                                </p>
+                                <p>
+                                  <b>3. ECG Test:</b> Electrodes are placed on
+                                  the chest, arms, and legs. The test is
+                                  painless and takes about 10-15 minutes.
+                                </p>
+                                <p>
+                                  <b>4. Specialist Review:</b> The ECG recording
+                                  is reviewed and certified by a cardiologist.
+                                </p>
+                                <p>
+                                  <b>5. Report Delivery:</b> Reports are
+                                  delivered quickly via WhatsApp, Email, or
+                                  printed copy.
+                                </p>
+                                <p>
+                                  <b>6. Tele-Consultation:</b> Speak to a
+                                  specialist doctor online for interpretation
+                                  and next steps.
+                                </p>
+                                <p>
+                                  <b>
+                                    Winbri Life Science - Your Heart in Safe
+                                    Hands
+                                  </b>
+                                </p>
+                                <p>
+                                  With round-the-clock ECG services,
+                                  cardiologist-certified reports, and
+                                  teleconsultation support, Winbri Life Science
+                                  ensures that top-quality heart care is always
+                                  available at your doorstep.
+                                </p>
+                                <p>
+                                  💙 Your health, our mission - Anytime.
+                                  Anywhere. Always. 💙
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          <span id="dotsx">...</span>
+                        )}
+                        <span
+                          onClick={toggleReadMore}
+                          id="myBtnrb"
+                          className="readMore text-primary fs-1"
+                        >
+                          {showMore ? "Read less" : "Read more"}
+                        </span>
+                      </div>
+
+                      <div className="row mt-md-3" id="book-appointment">
+                        <div className="col-lg-6 col-12">
+                          <div className="form-col">
+                            <div className="inner-form">
+                              <h2>We are Here to Help!</h2>
+                              <p>Get instant call back in few mins</p>
+                              <form
+                                action="https://www.healthians.com/callBackLead"
+                                id="getACallBackModal_form"
+                                name="add_address_form"
+                                className="form-horizontal"
+                                method="post"
+                              >
+                                <input
+                                  type="text"
+                                  placeholder="Full Name*"
+                                  name="name"
+                                  id="name"
+                                  className="form-control"
+                                  required=""
+                                />
+                                <input
+                                  type="tel"
+                                  placeholder="Enter 10-digit mobile no.*"
+                                  minLength={10}
+                                  maxLength={10}
+                                  name="mobile"
+                                  id="mobile"
+                                  className="form-control"
+                                  required=""
+                                />
+                                <input
+                                  type="text"
+                                  placeholder="City*"
+                                  name="city"
+                                  id="city"
+                                  className="form-control"
+                                  required=""
+                                />
+                                <div className="form-group">
+                                  <textarea
+                                    name="message"
+                                    className="form-control"
+                                    placeholder="Write Your Message Here....."
+                                    defaultValue={""}
+                                  />
+                                </div>
+                                <div className="doctor-fee">
+                                  <div className="book-appoint">
+                                    <button className="book_consult_btn">
+                                      Book an Appointment
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-md-6 col-12 d-md-block d-none">
+                          <div className="appointment-image">
+                            <img
+                              src="/assets/images/contact-img.webp"
+                              alt="#"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* <div className="row">
                         <div className="sortorder px-3">
                           <h2>Top Cardiology Doctors available</h2>
                           <div className="clearfix" />
@@ -183,10 +616,14 @@ function ECGService() {
                                       <ul className="d-flex">
                                         <li>
                                           <div className="doc-imgrat text-center">
-                                            <img
-                                              src="/assets/images/doctor/63cf67be55b85.jpg"
-                                              alt="doctor"
-                                            />
+                                            <div className="doc-img">
+                                              <img
+                                                src="/assets/images/doctor/63cf67be55b85.jpg"
+                                                alt="doctor"
+                                                width="100%"
+                                                height="100%"
+                                              />
+                                            </div>
                                             <div className="rating-div">
                                               15 Year of Exp.
                                             </div>
@@ -212,10 +649,6 @@ function ECGService() {
                                           <div className="language_known">
                                             <span>Language known:</span> Hindi,
                                             English
-                                          </div>
-                                          <div className="next_slot">
-                                            <span>Next available at:</span>{" "}
-                                            05:30 PM, Today
                                           </div>
                                         </li>
                                       </ul>
@@ -261,7 +694,6 @@ function ECGService() {
                                       role="dialog"
                                     >
                                       <div className="modal-dialog">
-                                        {/* Modal content*/}
                                         <div className="modal-content">
                                           <div className="modal-header">
                                             <button
@@ -357,10 +789,6 @@ function ECGService() {
                                             <span>Language known:</span> Hindi,
                                             English, Bengali
                                           </div>
-                                          <div className="next_slot">
-                                            <span>Next available at:</span>{" "}
-                                            11:00 AM, Tomorrow
-                                          </div>
                                         </li>
                                       </ul>
                                     </div>
@@ -405,7 +833,6 @@ function ECGService() {
                                       role="dialog"
                                     >
                                       <div className="modal-dialog">
-                                        {/* Modal content*/}
                                         <div className="modal-content">
                                           <div className="modal-header">
                                             <button
@@ -495,10 +922,6 @@ function ECGService() {
                                             <span>Language known:</span> Hindi,
                                             English
                                           </div>
-                                          <div className="next_slot">
-                                            <span>Next available at:</span>{" "}
-                                            05:30 PM, Today
-                                          </div>
                                         </li>
                                       </ul>
                                     </div>
@@ -543,7 +966,6 @@ function ECGService() {
                                       role="dialog"
                                     >
                                       <div className="modal-dialog">
-                                        {/* Modal content*/}
                                         <div className="modal-content">
                                           <div className="modal-header">
                                             <button
@@ -841,7 +1263,6 @@ function ECGService() {
                                     </button>
                                   </div>
                                 </div>
-                                {/* <button class="appointment-btn">Book an Appointment</button> */}
                                 <input
                                   type="hidden"
                                   name="utm_id"
@@ -863,7 +1284,7 @@ function ECGService() {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   {/* <div className="col-12">
@@ -1244,6 +1665,8 @@ function ECGService() {
             </div>
           </div>
         </section>
+
+        <AllServices service={"ecg"} />
       </>
 
       <HomeFooter />

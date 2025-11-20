@@ -91,7 +91,7 @@ function NotificationDiv() {
                     <span className="fs-12">{content.timeAgo}</span>
                     <p onClick={handleCheckOut} className='mt-1'>Check Out</p>
                 </div>
-                <div className='notification-bg-img'><img src={process.env.PUBLIC_URL + '/assets/images/icon/notification-bg-img.png'} alt="Fg Group" className='img-fluid' /></div>
+                <div className='notification-bg-img'><img src={process.env.PUBLIC_URL + '/assets/images/icon/notification-bg-img.png'} alt="Winbri Life Science" className='img-fluid' /></div>
             </div>
         </>
     );

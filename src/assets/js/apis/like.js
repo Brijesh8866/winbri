@@ -10,7 +10,7 @@ try {
 
 function recipeLike(recipeId, element, unlike) {
 
-    if (!localStorage.getItem('fg_group_user_authorization')) {
+    if (!localStorage.getItem('winbri_life_science_user_authorization')) {
         return modalLogin()
     }
 
@@ -61,7 +61,7 @@ function recipeLike(recipeId, element, unlike) {
 
 function getRecipeLike(recipeId, element) {
     let baseURL = BASE_URL
-    if (!localStorage.getItem('fg_group_user_authorization')) {
+    if (!localStorage.getItem('winbri_life_science_user_authorization')) {
         baseURL = HOST + PUBLIC_ROUTE
     }
 

@@ -27,7 +27,7 @@ const ScholarshipModal = () => {
   let timeDifference, ticker, scholarshipResult, whatsappMsg;
 
   useEffect(() => {
-    const userAuthorization = localStorage.getItem("fg_group_user_authorization");
+    const userAuthorization = localStorage.getItem("winbri_life_science_user_authorization");
 
     if (userAuthorization === null) {
       Swal.fire({
@@ -316,10 +316,10 @@ const ScholarshipModal = () => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
+                  process.env.PUBLIC_URL + "/assets/images/logo.webp"
                 }
                 width="50px"
-                alt="Fg Group"
+                alt="Winbri"
               />
               <header className="mt-2 fs-20">
                 Please choose your course and start your{" "}
@@ -461,10 +461,10 @@ const ScholarshipModal = () => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
+                  process.env.PUBLIC_URL + "/assets/images/logo.webp"
                 }
                 width="50px"
-                alt="Fg Group"
+                alt="Winbri"
               />
               <header className="mt-2 fs-20">
                 Start Your{" "}
@@ -539,10 +539,10 @@ const ScholarshipModal = () => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
+                  process.env.PUBLIC_URL + "/assets/images/logo.webp"
                 }
                 width="50px"
-                alt="Fg Group"
+                alt="Winbri"
               />
               <header className="mt-2 fs-20">
                 You Already Give Exam here is{" "}

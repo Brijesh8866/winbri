@@ -55,10 +55,10 @@ const EmailModal = ({ onClose }) => {
             <div className="text-center">
               <img
                 src={
-                  process.env.PUBLIC_URL + '../assets/images/logo/fg_group.webp'
+                  process.env.PUBLIC_URL + '/assets/images/logo.webp'
                 }
                 width="20%"
-                alt="Fg Group"
+                alt="Winbri"
               />
             </div>
           </Modal.Title>

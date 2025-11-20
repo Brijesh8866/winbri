@@ -142,8 +142,8 @@ function createProductOrder(product_id, quantity = 1, address) {
     localStorage.setItem('tmp_MealProductPurchasePayload', JSON.stringify({ ...payload, expire: new Date().getTime() + (1000 * 60 * 60 * 5) }))
 
     // Check Authentication
-    if (localStorage.getItem("fg_group_user_authorization") == null || localStorage.getItem("user_info") == null) {
-        localStorage.removeItem('fg_group_user_authorization')
+    if (localStorage.getItem("winbri_life_science_user_authorization") == null || localStorage.getItem("user_info") == null) {
+        localStorage.removeItem('winbri_life_science_user_authorization')
         localStorage.removeItem('user_info')
 
         // Store Payload in Local Storage

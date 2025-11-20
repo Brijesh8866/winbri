@@ -5,6 +5,12 @@ import HomeFooter from "../components/partials/Footer/footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import BookAppointmentButton from "../components/book-appointment-button";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import CountUp from "react-countup";
 
 function Home() {
   const settings = {
@@ -34,10 +40,12 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>One-Stop Solution For All Your Fitness Needs - FG Group</title>
+        <title>
+          One-Stop Solution For All Your Fitness Needs - Winbri Life Science
+        </title>
         <meta
           name="description"
-          content="FG Group Solely Works In The Health & Fitness Sector. We Provide Diet & Exercise Plans As Well As Health And Fitness Courses. We Also Offer Digital Marketing Courses For Fitness Professionals, And Ready-Made Meals For Healthy Living."
+          content="Winbri Life Science Solely Works In The Health & Fitness Sector. We Provide Diet & Exercise Plans As Well As Health And Fitness Courses. We Also Offer Digital Marketing Courses For Fitness Professionals, And Ready-Made Meals For Healthy Living."
         />
         <meta
           name="keywords"
@@ -52,6 +60,7 @@ function Home() {
       </Helmet>
 
       <HomeHeader />
+      {/* <BookAppointmentButton /> */}
 
       <>
         <meta charSet="utf-8" />
@@ -88,21 +97,21 @@ function Home() {
                       <a href="about-us">About</a>
                     </li>
                     <li>
-                      <a href="about-us">Doctors</a>
+                      <a href="#services">Services</a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="contact">Contact</a>
                     </li>
                     <li>
                       <a href="contact">FAQ</a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="col-lg-6 col-md-7 col-12 d-md-block d-none">
                   <ul className="top-contact">
                     <li>
                       <i className="fa fa-phone" />
-                      +91 82007 88099
+                      +91 95101 75747
                     </li>
                     <li>
                       <i className="fa fa-envelope" />
@@ -186,7 +195,7 @@ function Home() {
                               <ul>
                                 <li className="d-md-none d-flex align-items-center">
                                   <i className="fa fa-phone ps-2" />
-                                  <a href="#">+91 82007 88099</a>
+                                  <a href="#">+91 95101 75747</a>
                                 </li>
                                 <li className="d-md-none d-flex align-items-center">
                                   <i className="fa fa-envelope ps-2" />
@@ -220,9 +229,31 @@ function Home() {
         {/* Slider Area */}
         {/* <section className="slider d-md-block d-none"> */}
         <section className="slider">
-          <div className="hero-slider">
+          <div className="hero-slider d-md-block d-none">
             <Slider {...settings}>
-              <div className="single-slider">
+              <div className="single-slider d-md-block d-none">
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/assets/images/diagnostic-slider.png")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                ></div>
+              </div>
+              <div className="single-slider d-md-block d-none">
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/assets/images/healthcare-slider.png")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                ></div>
+              </div>
+              {/* <div className="single-slider">
                 <div
                   style={{
                     backgroundImage: 'url("/assets/images/slider-2.webp")',
@@ -241,84 +272,12 @@ function Home() {
                             <span>Trust!</span>
                           </h1>
                           <p>
-                            Book Appointment for Emergency <span>ECG</span> or
-                            <span>Routine ECG</span>
+                            Book Appointment for Emergency{" "}
+                            <span>Diagnostic services</span> at Doorstep
                           </p>
                           <div className="button">
                             <a href="#" className="btn">
                               Book Now
-                            </a>
-                            <a href="#" className="btn primary">
-                              Know More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-slider">
-                <div
-                  style={{
-                    backgroundImage: 'url("/assets/images/slider-1.webp")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    minHeight: "600px",
-                  }}
-                >
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-7">
-                        <div className="text">
-                          <h1>
-                            We Provide <span>Medical</span> Services That You
-                            Can
-                            <span>Trust!</span>
-                          </h1>
-                          <p>
-                            Book Appointment for Emergency <span>PFT</span> or
-                            <span>Routine PFT</span>
-                          </p>
-                          <div className="button">
-                            <a href="#" className="btn">
-                              Get Appointment
-                            </a>
-                            <a href="#" className="btn primary">
-                              Know More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-slider">
-                <div
-                  style={{
-                    backgroundImage: 'url("/assets/images/slider-3.webp")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    minHeight: "600px",
-                  }}
-                >
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-7">
-                        <div className="text">
-                          <h1>
-                            We Provide <span>Medical</span> Services That You
-                            Can
-                            <span>Trust!</span>
-                          </h1>
-                          <p>
-                            Book Appointment for Emergency <span>X-Ray</span> or
-                            <span>Routine X-Ray</span>
-                          </p>
-                          <div className="button">
-                            <a href="#" className="btn">
-                              Get Appointment
                             </a>
                             <a href="#" className="btn primary">
                               Know More
@@ -350,8 +309,7 @@ function Home() {
                           </h1>
                           <p>
                             Book Appointment for Emergency{" "}
-                            <span>Blood Test</span> or
-                            <span>Routine Blood Test</span>
+                            <span>Health Care Services</span> At Doorstep
                           </p>
                           <div className="button">
                             <a href="#" className="btn">
@@ -366,7 +324,105 @@ function Home() {
                     </div>
                   </div>
                 </div>
+              </div> */}
+            </Slider>
+          </div>
+          <div className="hero-slider d-md-none d-block">
+            <Slider {...settings}>
+              <div className="single-slider d-md-none d-block">
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/assets/images/diagnostic-slider-mobile.png")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                ></div>
               </div>
+              <div className="single-slider d-md-none d-block">
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/assets/images/healthcare-slider-mobile.png")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                ></div>
+              </div>
+              {/* <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-2.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency{" "}
+                            <span>Diagnostic services</span> at Doorstep
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Book Now
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="single-slider">
+                <div
+                  style={{
+                    backgroundImage: 'url("/assets/images/slider-4.webp")',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    minHeight: "600px",
+                  }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <div className="text">
+                          <h1>
+                            We Provide <span>Medical</span> Services That You
+                            Can
+                            <span>Trust!</span>
+                          </h1>
+                          <p>
+                            Book Appointment for Emergency{" "}
+                            <span>Health Care Services</span> At Doorstep
+                          </p>
+                          <div className="button">
+                            <a href="#" className="btn">
+                              Get Appointment
+                            </a>
+                            <a href="#" className="btn primary">
+                              Know More
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
             </Slider>
           </div>
         </section>
@@ -576,6 +632,7 @@ function Home() {
         <section
           className="services section"
           style={{ padding: "0px 0px 50px" }}
+          id="services"
         >
           <div className="container">
             <div className="row">
@@ -586,74 +643,446 @@ function Home() {
                     src="/assets/images/section-img.webp"
                     alt="Health Services"
                   />
-                  {/* <p>
-                    We offer a variety of diagnostic services to help you
-                    maintain your health and well-being with advanced medical
-                    technology and expert care.
-                  </p> */}
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">ECG</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+            <div className="row justify-content-center d-md-flex d-none">
+              <OwlCarousel
+                loop
+                autoplay
+                dots={false}
+                id="carouselExampleControls"
+                className="owl-carousel owl-theme"
+                responsive={{
+                  0: {
+                    items: 1,
+                  },
+                  600: {
+                    items: 6,
+                  },
+                  1000: {
+                    items: 6,
+                  },
+                }}
+              >
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/ecg-test">
+                    <img
+                      src="/assets/images/service/ecg.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">ECG</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/pft-test">
+                    <img
+                      src="/assets/images/service/pft.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">PFT</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/x-ray-test">
+                    <img
+                      src="/assets/images/service/x-ray.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">X-ray</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/holter-monitoring-test">
+                    <img
+                      src="/assets/images/service/holter.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Holter Monitoring</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/sleep-study-test">
+                    <img
+                      src="/assets/images/service/sleep-study.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Sleep Study</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/abpm-test">
+                    <img
+                      src="/assets/images/service/abpm.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">ABPM</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/audiometry-test">
+                    <img
+                      src="/assets/images/service/audiometry.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Audiometry</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/bone-density-test">
+                    <img
+                      src="/assets/images/service/bone-density.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Bone Density</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/eeg-test">
+                    <img
+                      src="/assets/images/service/eeg.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">EEG</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/emg-test">
+                    <img
+                      src="/assets/images/service/emg.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">EMG</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/health-check-up-test">
+                    <img
+                      src="/assets/images/service/health-check-up.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Health Check-Up</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/lvef-analysis">
+                    <img
+                      src="/assets/images/service/lvef.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">LVEF Analysis</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 mb-md-0 mb-3 text-center service">
+                  <a alt="Winbri" href="/pathology-test">
+                    <img
+                      src="/assets/images/service/blood-report.JPG"
+                      width="100%"
+                      alt=""
+                    />
+                    <p className="text-center mt-1">Pathology / Lab Test</p>
+                    <button className="text-center read-btn mb-1">
+                      READ MORE
+                    </button>
+                    <button className="text-center book-btn">
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+              </OwlCarousel>
+            </div>
+            <div className="row justify-content-center d-md-none d-flex">
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/ecg-test">
+                  <img
+                    src="/assets/images/service/ecg.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">ECG</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">PFT</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/pft-test">
+                  <img
+                    src="/assets/images/service/pft.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">PFT</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">X-ray</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/x-ray-test">
+                  <img
+                    src="/assets/images/service/x-ray.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">X-ray</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Blood Tests</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/holter-monitoring-test">
+                  <img
+                    src="/assets/images/service/holter.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Holter Monitoring</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Sleep Study</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/sleep-study-test">
+                  <img
+                    src="/assets/images/service/sleep-study.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Sleep Study</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Holter Monitoring</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/abpm-test">
+                  <img
+                    src="/assets/images/service/abpm.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">ABPM</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/audiometry-test">
+                  <img
+                    src="/assets/images/service/audiometry.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Audiometry</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/bone-density-test">
+                  <img
+                    src="/assets/images/service/bone-density.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Bone Density</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/eeg-test">
+                  <img
+                    src="/assets/images/service/eeg.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">EEG</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/emg-test">
+                  <img
+                    src="/assets/images/service/emg.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">EMG</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/health-check-up-test">
+                  <img
+                    src="/assets/images/service/health-check-up.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Health Check-Up</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/lvef-analysis">
+                  <img
+                    src="/assets/images/service/lvef.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">LVEF Analysis</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service mt-md-3 mt-0">
+                <a alt="Winbri" href="/pathology-test">
+                  <img
+                    src="/assets/images/service/blood-report.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Pathology / Lab Test</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
             </div>
             {/* <div className="row">
@@ -771,6 +1200,64 @@ function Home() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title">
+                  <h2>Diagnostic services at center</h2>
+                  <img
+                    src="/assets/images/section-img.webp"
+                    alt="Health Services"
+                  />
+                  {/* <p>
+                    We offer a variety of diagnostic services to help you
+                    maintain your health and well-being with advanced medical
+                    technology and expert care.
+                  </p> */}
+                </div>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/treadmill-test">
+                  <img
+                    src="/assets/images/service/tmt.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Treadmill</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/2d-echo-test">
+                  <img
+                    src="/assets/images/service/eco.JPG"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">2D Echocardiography</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* service */}
+        <section
+          className="services section"
+          style={{ padding: "0px 0px 50px" }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title">
                   <h2>Health Care Services At Doorstep</h2>
                   <img
                     src="/assets/images/section-img.webp"
@@ -785,65 +1272,101 @@ function Home() {
               </div>
             </div>
             <div className="row">
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">ECG</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/specialty-doctor-consultation">
+                  <img
+                    src="/assets/images/health-care-service/specialty-doctor-consultation.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Specialty Doctor</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">PFT</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/specialist-consultation">
+                  <img
+                    src="/assets/images/health-care-service/specialist-consultations.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Specialist</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">X-ray</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/gp-doctor-consultation">
+                  <img
+                    src="/assets/images/health-care-service/general-practitioner.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">General Practitioner</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Blood Tests</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/physiotherapy-consultation">
+                  <img
+                    src="/assets/images/health-care-service/physiotherapy.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Physiotherapy</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/a56b26a0-30f1-4977-96f8-7acf1b3e0e02.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Sleep Study</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/dietician-consultation">
+                  <img
+                    src="/assets/images/health-care-service/dietician-consultation.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Dietician</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
-              <div className="col-2 text-center service">
-                <img
-                  src="https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto"
-                  width="100%"
-                  alt=""
-                />
-                <p className="text-center mt-1">Holter Monitoring</p>
-                <button className="text-center read-btn mb-1">READ MORE</button>
-                <button className="text-center consult-btn">CONSULT NOW</button>
+              <div className="col-md-2 col-6 mb-md-0 mb-3 text-center service">
+                <a alt="Winbri" href="/nursing-care">
+                  <img
+                    src="/assets/images/health-care-service/nursing-care.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <p className="text-center mt-1">Nursing Care</p>
+                  <button className="text-center read-btn mb-1">
+                    READ MORE
+                  </button>
+                  <button className="text-center book-btn">
+                    BOOK NOW
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -908,10 +1431,17 @@ function Home() {
                   <i class="fa-solid fa-house"></i>
                   <div className="content">
                     <div className="d-flex justify-content-md-start justify-content-center">
-                      <span className="counter">1500</span>
+                      <span className="counter">
+                        <CountUp
+                          start={0}
+                          end={2000}
+                          duration={10}
+                          separator=","
+                        />
+                      </span>
                       <span>+</span>
                     </div>
-                    <p>Clinics</p>
+                    <p>Clinics & Hospitals</p>
                   </div>
                 </div>
               </div>
@@ -920,10 +1450,17 @@ function Home() {
                   <i class="fa-solid fa-user-doctor"></i>
                   <div className="content">
                     <div className="d-flex justify-content-md-start justify-content-center">
-                      <span className="counter">1500</span>
+                      <span className="counter">
+                        <CountUp
+                          start={0}
+                          end={2000}
+                          duration={10}
+                          separator=","
+                        />
+                      </span>
                       <span>+</span>
                     </div>
-                    <p>Clinical Doctors</p>
+                    <p>Doctors</p>
                   </div>
                 </div>
               </div>
@@ -933,7 +1470,14 @@ function Home() {
                   {/* <i class="fa-solid fa-face-smile"></i> */}
                   <div className="content">
                     <div className="d-flex justify-content-md-start justify-content-center">
-                      <span className="counter">15,715</span>
+                      <span className="counter">
+                        <CountUp
+                          start={0}
+                          end={25715}
+                          duration={10}
+                          separator=","
+                        />
+                      </span>
                       <span>+</span>
                     </div>
                     <p>Happy Patients</p>
@@ -945,7 +1489,14 @@ function Home() {
                   <i class="fa-regular fa-calendar"></i>
                   <div className="content">
                     <div className="d-flex justify-content-md-start justify-content-center">
-                      <span className="counter">7</span>
+                      <span className="counter">
+                        <CountUp
+                          start={0}
+                          end={7}
+                          duration={10}
+                          separator=","
+                        />
+                      </span>
                       <span>+</span>
                     </div>
                     <p>Years of Experience</p>
@@ -987,7 +1538,7 @@ function Home() {
                     <div className="col-lg-12">
                       <ul className="list under-email m-0 p-0">
                         <li>
-                          Get Free Assessment:
+                          Get Free Assessment:{" "}
                           <a href="">winbrilifescience@gmail.com</a>
                         </li>
                       </ul>
@@ -1027,7 +1578,7 @@ function Home() {
               <div className="col-lg-12 col-md-12 col-12">
                 <div className="content">
                   <h2>
-                    Do you need Emergency Medical Care? Call @ 99799 60020
+                    Do you need Emergency Medical Care? Call @ 95101 75747
                   </h2>
                   <p>
                     Winbri Life Science offers ECG tests at-home for quick
@@ -1066,62 +1617,30 @@ function Home() {
           </div>
           <div className="container-fluid">
             <div className="row">
-                <div className="col-3 px-1">
-                  <img
-                    src="/assets/images/10.webp"
-                    alt="10"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1">
-                  <img
-                    src="/assets/images/11.webp"
-                    alt="11"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1">
-                  <img
-                    src="/assets/images/12.webp"
-                    alt="12"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1">
-                  <img
-                    src="/assets/images/13.webp"
-                    alt="13"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1 pt-2">
-                  <img
-                    src="/assets/images/31.webp"
-                    alt="31"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1 pt-2">
-                  <img
-                    src="/assets/images/37.webp"
-                    alt="37"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1 pt-2">
-                  <img
-                    src="/assets/images/06.webp"
-                    alt="06"
-                    className="w-100"
-                  />
-                </div>
-                <div className="col-3 px-1 pt-2">
-                  <img
-                    src="/assets/images/25.webp"
-                    alt="25"
-                    className="w-100"
-                  />
-                </div>
+              <div className="col-md-3 col-6 px-1">
+                <img src="/assets/images/10.webp" alt="10" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1">
+                <img src="/assets/images/11.webp" alt="11" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-md-0 pt-2">
+                <img src="/assets/images/12.webp" alt="12" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-md-0 pt-2">
+                <img src="/assets/images/13.webp" alt="13" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-2">
+                <img src="/assets/images/31.webp" alt="31" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-2">
+                <img src="/assets/images/37.webp" alt="37" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-2">
+                <img src="/assets/images/06.webp" alt="06" className="w-100" />
+              </div>
+              <div className="col-md-3 col-6 px-1 pt-2">
+                <img src="/assets/images/25.webp" alt="25" className="w-100" />
+              </div>
             </div>
           </div>
         </section>
@@ -1471,9 +1990,7 @@ function Home() {
                   <div className="single-footer">
                     <h2>About Us</h2>
                     <p>
-                      Winbri Life Science is leading doorstep diagnostic medical
-                      services company provided to ensure health and wellness of
-                      patients.
+                      401, Jivandeep Doctor House, Unapani Rd, LalDarwaja, Lal Darwaja, Varachha, Surat, Gujarat 395003
                     </p>
                     <ul className="social ps-0">
                       <li>

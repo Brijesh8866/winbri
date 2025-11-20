@@ -5,18 +5,18 @@ let fwgBaseUrl = "http://localhost:82";
 let razorpayMerchantId = "rzp_test_F0TUZmabOwKkhe";
 let environment = "development";
 
-if (hostname === "fggroup.in" || hostname === "www.fggroup.in") {
-  baseUrl = "https://api.fggroup.in";
-  fwgBaseUrl = 'https://app-api.fggroup.in';
+if (hostname === "winbri.com" || hostname === "www.winbri.com") {
+  baseUrl = "https://api.winbri.com";
+  fwgBaseUrl = 'https://app-api.winbri.com';
   environment = 'production'
   razorpayMerchantId = "rzp_live_tdfTCMm8C9gJNN";
-} else if (hostname === "test.fggroup.in") {
-  baseUrl = "https://dev-api.fggroup.in";
-  fwgBaseUrl = 'https://fg-app-dev-api.fggroup.in';
+} else if (hostname === "test.winbri.com") {
+  baseUrl = "https://dev-api.winbri.com";
+  fwgBaseUrl = 'https://fg-app-dev-api.winbri.com';
 } else {
-  baseUrl = "https://dev-api.fggroup.in";
+  baseUrl = "https://dev-api.winbri.com";
   // baseUrl = 'http://localhost';
-  fwgBaseUrl = 'https://fg-app-dev-api.fggroup.in';
+  fwgBaseUrl = 'https://fg-app-dev-api.winbri.com';
   // fwgBaseUrl = 'http://localhost:82';
 }
 
